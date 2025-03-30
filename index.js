@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentKeyIndex = Math.floor(Math.random() * keys.length);
     updateKeyDisplay();
     messageDisplay.textContent = "";
-    PNotify.info({ text: "Нова гра" });
+    PNotify.info({ text: "Нова буква" });
   });
 
   updateKeyDisplay();
