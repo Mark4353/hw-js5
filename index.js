@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateKeyDisplay() {
     keyDisplay.textContent = keys[currentKeyIndex];
   };
-
   function showErrorMessage(text) {
     PNotify.error({ text });
     messageDisplay.textContent = text;
@@ -20,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     PNotify.success({ text });
     messageDisplay.textContent = text;
     messageDisplay.style.color = "green";
-  console.log("win")
-};
+    console.log("win");
+  };
 
-  document.addEventListener("keydown", (event) => {
+  document.addEventListener("keydown", (event)=> {
     if (event.key === keys[currentKeyIndex]) {
       showSuccessMessage("Правильно");
       currentKeyIndex = Math.floor(Math.random() * keys.length);
@@ -33,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.addEventListener("keypress", (event) => {
+  document.addEventListener("keypress", (event)=> {
     event.preventDefault();
   });
 
-  newGameButton.addEventListener("click", () => {
+  newGameButton.addEventListener("click", ()=> {
     currentKeyIndex = Math.floor(Math.random() * keys.length);
     updateKeyDisplay();
     messageDisplay.textContent = "";
@@ -46,13 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateKeyDisplay();
 });
-
-
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const ctx = document.getElementById("sales-chart").getContext("2d");
@@ -67,43 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
           600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200,
           1250, 1300, 1350,
         ],
-        backgroundColor: "rgba(33, 150, 243, 0.2)",
+        backgroundColor: "#2196f3",
         borderColor: "#2196f3",
-        borderWidth: 2,
-        pointBackgroundColor: "#2196f3",
-        pointBorderColor: "#fff",
-        pointRadius: 5,
-        fill: true,
+        borderWidth: 1,
       },
     ],
-  };
+  } ;
 
   new Chart(ctx, {
     type: "line",
     data: chartData,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-        },
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: "Дні місяця",
-          },
-        },
-        y: {
-          title: {
-            display: true,
-            text: "Кількість продажів",
-          },
-          beginAtZero: true,
-        },
-      },
-    },
   });
 });
