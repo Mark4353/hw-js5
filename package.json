@@ -1,0 +1,30 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Mark4353/hw-js5#readme",
+  "bugs": {
+    "url": "https://github.com/Mark4353/hw-js5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mark4353/hw-js5.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d build",
+    "prederloy": "npm run build",
+    "deploys": "gh-pages-deploy"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "gh-pages": "^6.3.0"
+  },
+  "devDependencies": {
+    "@pnotify/core": "^5.2.0"
+  }
+}
